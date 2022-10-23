@@ -40,7 +40,7 @@
 \usepackage{enumitem}
 
 % centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 
 %to prevent spillover of tabular into next pages
 \usepackage{supertabular}
@@ -86,65 +86,133 @@
 %	TITLE
 %----------------------------------------------------------------------------------------
 
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Andrew Hartman} \\[7.5pt]
-\href{https://hartmancoding.com}{\raisebox{-0.05\height}\faGlobe \ hartmancoding.com} \ $|$ \ 
-\href{mailto:andrew.hartman@hartmancoding.com}{\raisebox{-0.05\height}\faEnvelope \ andrew.hartman@hartmancoding.com} \ $|$ \ 
+\begin{tabularx}{\linewidth}{ @{}l C r@{} }
+\href{https://github.com/Andrew9317}{\raisebox{-0.05\height}\faGithub \ Andrew9317} &
+\Huge{Andrew Hartman}\ &
 \href{tel:+12566517740}{\raisebox{-0.05\height}\faMobile \ 256-651-7740} \\
+\href{https://www.linkedin.com/in/andrew-hartman-4680a9203/}{\raisebox{-0.05\height}\faLinkedin\ Andrew Hartman} \ &
+\href{mailto:andrew.hartman@hartmancoding.com}{\raisebox{-0.05\height}\faEnvelope \ andrew.hartman@hartmancoding.com} \ &
+\href{https://hartmancoding.com}{\raisebox{-0.05\height}\faGlobe \ hartmancoding.com} \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
+%	KEYWORDS
 %----------------------------------------------------------------------------------------
-
-%Interests/ Keywords/ Summary
-\section{Summary}
-This CV can also be automatically complied and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
-
-%Experience
-\section{Work Experience}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Rebellion Defense} & \hfill Jul 2022 - present \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{MTSI} & \hfill Mar 2019 - Jan 2021 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] long long line of blah blah that will wrap when the table fills the column width
-        \item[--] again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-    \end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
-
-%Projects
-\section{Projects}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+\section{Keywords}
+\begin{tabularx}{\linewidth}{|C|C|C|C|}
+\textbf{Secret Clearance} \ &
+\textbf{Software Engineer} \ &
+\textbf{Models \& Sims} \ &
+\textbf{Cloud Computing} \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2015 - 2018 & Bachelor's Degree at the \textbf{University of Alabama Huntsville} \hfill \\ 
-
+\begin{tabularx}{\linewidth}{ @{}lCr@{} }
+\textbf{Bachelor of Science, Computer Science} & & 2015 - 2018 \\
+University of Alabama Huntsville
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
-\section{Skills}
+\section{Technical Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+Languages: &  \normalsize{Go, Python, C++, Rust, Javascript, Matlab}\\
+Frameworks: & \normalsize{Terraform, Kafka, RabbitMQ, Protobuf, gRPC, Qt, Pandas \& Numpy, React}\\
+Tools: & \normalsize{Docker, Kubernetes, AWS (EKS $|$ S3 $|$ ECR), Git, Gitlab \& Jenkins CI/CD, Jira, CMake, Valgrind, Perf, Perforce, SVN}\\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Experience
+\section{Work Experience}
+
+\begin{tabularx}{\linewidth}{
+    >{\hsize=0.8\hsize}X
+    >{\hsize=1.2\hsize}C
+    >{\hsize=1.0\hsize}X
+    }
+    \textbf{Sr. Software Engineer}&\textbf{Rebellion Defense}&\hfill Jul 2022 - present \\[3.75pt]
+    \multicolumn{3}{@{}l@{}}{
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Designed and prototyped core abstractions in \textbf{Go \& Python} to create a simulation platform that supports machine learning and third-party models.
+            \item[--] Translated Go \& Python prototypes into an ABI stable core library using \textbf{C++} to support upgrading models without requiring client code to recompile.
+            \item[--] Created and maintained language bindings from \textbf{Go \& Python} to the ABI stable C++ library.
+            \item[--] Used \textbf{Terraform} to create infrastructure-as-code environments in AWS.
+            \item[--] \textbf{Mentored} multiple junior and mid-level developers.
+            \item[--] Translated and optimized multiple algorithms from \textbf{Python \& Matlab} to \textbf{Go \& C++}
+            \item[--] Implemented \textbf{gRPC} endpoints for communication from the models to the main platform controller. 
+        \end{itemize}
+        \end{minipage}
+    }
+\\
+\\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{
+    >{\hsize=0.8\hsize}X
+    >{\hsize=1.2\hsize}C
+    >{\hsize=1.0\hsize}X
+    }
+    \textbf{Technical Lead}&\textbf{MTSI}&\hfill Apr 2021 - Jul 2022 \\[3.75pt]
+    \multicolumn{3}{@{}l@{}}{
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Designed and implemented \textbf{C++} microservice plugin framework with \textbf{Kafka \& Protobuf} to monitor and correct errant UAV \& Aircraft behavior.
+            \item[--] Authored and maintained documentation to ensure compliance with FAA standards \textbf{DO-178C \& DO-254} and Army standards \textbf{MOSA \& FACE}.
+            \item[--] Configured \textbf{Gitlab CI/CD} pipelines to rapidly iterate by automating code sanitation and analysis.
+            \item[--] \textbf{Tasked and mentored} team of 3 other software engineers.
+        \end{itemize}
+        \end{minipage}
+    }
+\\
+\\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{
+    >{\hsize=0.8\hsize}X
+    >{\hsize=1.2\hsize}C
+    >{\hsize=1.0\hsize}X
+    }
+    \textbf{Software Lead}&\textbf{SAIC}&\hfill Oct 2020 - Apr 2021 \\[3.75pt]
+    \multicolumn{3}{@{}l@{}}{
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Modified HIMARS / MLRS launcher to be operable remotely via \textbf{UDP, TCP, \& Qt} over radios.
+            \item[--] Analyzed and debugged network traffic with \textbf{Wireshark}. 
+            \item[--] Cross-compiled binaries between Windows and VxWorks
+            \item[--] \textbf{Tasked and mentored} team of 5 other software engineers.
+        \end{itemize}
+        \end{minipage}
+    }
+\\
+\\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{
+    >{\hsize=0.8\hsize}X
+    >{\hsize=1.2\hsize}C
+    >{\hsize=1.0\hsize}X
+    }
+    \textbf{Software Engineer}&\textbf{Torch Technologies}&\hfill May 2018 - Oct 2020 \\[3.75pt]
+    \multicolumn{3}{@{}l@{}}{
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Set up \textbf{Jenkins CI/CD} jobs to automate code sanition, analysis, and regression tests.
+            \item[--] Implemented Python analysis scripts with \textbf{Pandas \& numpy} to analyze simulation data.
+            \item[--] Translated IR sensor models and radar fusion algorithms from \textbf{Matlab} to \textbf{C++}.
+            \item[--] Created and maintained C++ middleware to allow communication between PATRIOT \textbf{HWIL} and a simulation via \textbf{DIS \& UDP}.
+            \item[--] Designed and maintained a cross platform C++ \textbf{Qt} desktop application for data scientists to rapidly iterate on flight test planning.
+        \end{itemize}
+        \end{minipage}
+    }
+\\
 \end{tabularx}
 
 \vfill
