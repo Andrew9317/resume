@@ -2,7 +2,8 @@
     "name": "resume-dev",
     "extensions": [
         "mathematic.vscode-latex",
-        "James-Yu.latex-workshop"
+        "James-Yu.latex-workshop",
+        "ow.vscode-subword-navigation"
     ],
     "build": {
 		"dockerfile": "Dockerfile",
