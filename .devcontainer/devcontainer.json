@@ -1,0 +1,11 @@
+{
+    "name": "resume-dev",
+    "extensions": [
+        "mathematic.vscode-latex",
+        "James-Yu.latex-workshop"
+    ],
+    "build": {
+		"dockerfile": "Dockerfile",
+		"context": "."
+	}
+}
