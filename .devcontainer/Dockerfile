@@ -1,3 +1,3 @@
-FROM pandoc/latex
+FROM texlive/texlive:latest
 
-RUN apk add git
+RUN apt-get update && apt-get install git
