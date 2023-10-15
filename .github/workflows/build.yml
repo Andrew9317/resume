@@ -11,21 +11,15 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: cv-fte
+      - name: hartman-resume
         uses: dante-ev/latex-action@latest
         with:
-          root_file: cv-fte
-          working_directory: ${{ env.DIR }}
-      - name: cv-ctr
-        uses: dante-ev/latex-action@latest
-        with:
-          root_file: cv-ctr
+          root_file: hartman_resume
           working_directory: ${{ env.DIR }}
       - name: move
         run: |
           mkdir -p github_artifacts
-          mv ${{ env.DIR }}/cv-fte.pdf ./github_artifacts/
-          mv ${{ env.DIR }}/cv-ctr.pdf ./github_artifacts/
+          mv ${{ env.DIR }}/hartman_resume.pdf ./github_artifacts/
           mv ${{ env.DIR }}/CNAME ./github_artifacts/
           mv ${{ env.DIR }}/index.html ./github_artifacts/
       - name: Upload pdf as artifact
