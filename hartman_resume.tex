@@ -104,15 +104,6 @@
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{ @{}lCr@{} }
-\textbf{Bachelor of Science, Computer Science} & & 2015 - 2018 \\
-University of Alabama Huntsville
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Technical Skills}
@@ -128,25 +119,36 @@ Tools: & \normalsize{Docker, Git, Gitlab \& Jenkins CI/CD, Jira, CMake, Valgrind
 
 %Experience
 \section{Work Experience}
-
 \begin{tabularx}{\linewidth}{
     >{\hsize=0.8\hsize}X
     >{\hsize=1.2\hsize}C
     >{\hsize=1.0\hsize}X
     }
-    \textbf{Founder}&\textbf{Hartman Software Solutions, LLC}&\hfill Current \\[3.75pt]
+    \textbf{Software Consultant}&\textbf{Hartman Software Solutions}&\hfill Current \\[3.75pt]
+    \multicolumn{3}{p{7.3in}}{
+        \vspace{0mm}
+        \footnotesize{
+            \textbf{Responsibilities:} Read multiple messages from different vendor hardware 
+            (\textbf{ARINC-429, MIL-STD-1553, etc}) and translate them to a common \textbf{Protobuf} format. 
+            The messages were then compressed with \textbf{ZStd} and made available to send to different sinks 
+            (\textbf{MQTT, Kafka, TCP, etc}) based on configuration.
+        }
+    } \\[3.75pt]
     \multicolumn{3}{@{}l@{}}{
+        \small{
         \begin{minipage}[t]{\linewidth}
-        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \vspace{0mm}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt, align=right]
             \item[--] Architected and implemented a core library in modern \textbf{C++23} to provide common interfaces to collect messages from multiple hardware vendor APIs.
             \item[--] Optimized main message collection hotpath, resulting in \textbf{82\%} increased throughput.
-            \item[--] Implemented wrapper around \textbf{Opentelemetry} to compress and write logs, traces, and metrics to disk with \textbf{zstd}.
+            \item[--] Implemented wrapper around \textbf{Opentelemetry} to compress and write logs, traces, and metrics to disk with \textbf{ZStd}, stream to an \textbf{OTLP} collector, or output in plaintext to the console.
             \item[--] Implemented robust \textbf{CICD} pipeline on legacy \textbf{C++03} libraries, exposing and fixing \textbf{1000+} warnings, static-analysis findings, and sanitizer findings.
             \item[--] Identified and fixed multiple data-race and threading bugs.
             \item[--] Set up multiple dashboards and graphs to get insights from \textbf{OpenTelemetry} via \textbf{Signoz}
             \item[--] \textbf{Mentored} multiple junior and mid-level developers.
         \end{itemize}
         \end{minipage}
+        }
     }
 \\
 \\
@@ -158,12 +160,21 @@ Tools: & \normalsize{Docker, Git, Gitlab \& Jenkins CI/CD, Jira, CMake, Valgrind
     >{\hsize=1.0\hsize}X
     }
     \textbf{Sr. Software Engineer}&\textbf{Rebellion Defense}&\hfill Jul 2022 - Oct 2023 \\[3.75pt]
+    \multicolumn{3}{p{7.3in}}{
+        \vspace{0mm}
+        \footnotesize{
+            \textbf{Responsibilities:} Design and create the foundation for a cloud based modeling \& simulation platform.
+            I was tasked with architecting and leading the development of the framework that controlled the models, data flow, timing, and more.
+        }
+    } \\[3.75pt]
     \multicolumn{3}{@{}l@{}}{
+        \small{
         \begin{minipage}[t]{\linewidth}
+        \vspace{0mm}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
             \item[--] Architected and implemented an ABI stable \textbf{C++} lib reducing time to implement new language support by \textbf{90\%} and supporting simulation upgrades without requiring clients to recompile their code.
             \item[--] Architected and implemented language bindings with the above lib to enable \textbf{Go \& Python} simulation models.
-            \item[--] Architected and implemented \textbf{OpenTelemetry} instrumentation interface for logging, tracing, and metrics in the \textbf{C++, Go, \& Python} codebases.
+            \item[--] Implemented \textbf{OpenTelemetry} instrumentation interface for logging, tracing, and metrics in the \textbf{C++, Go, \& Python} codebases.
             \item[--] Optimized \textbf{OpenTelemetry gRPC} exporters to be async resulting in \textbf{198\%} increased throughput.
             \item[--] Set up multiple dashboards and graphs to get insights from \textbf{OpenTelemetry} via \textbf{AWS OpenSearch}
             \item[--] Architected and implemented multiple backend \textbf{REST} api layers using Python's \textbf{FastAPI} framework.
@@ -172,6 +183,7 @@ Tools: & \normalsize{Docker, Git, Gitlab \& Jenkins CI/CD, Jira, CMake, Valgrind
             \item[--] \textbf{Tasked and mentored} multiple junior and mid-level developers.
         \end{itemize}
         \end{minipage}
+        }
     }
 \\
 \\
@@ -183,18 +195,29 @@ Tools: & \normalsize{Docker, Git, Gitlab \& Jenkins CI/CD, Jira, CMake, Valgrind
     >{\hsize=1.0\hsize}X
     }
     \textbf{Software Lead}&\textbf{MTSI}&\hfill Apr 2021 - Jul 2022 \\[3.75pt]
+    \multicolumn{3}{p{7.3in}}{
+        \vspace{0mm}
+        \footnotesize{
+            \textbf{Responsibilities:} Partner with NASA to design and create a framework that enabled AI \& ML on safety critical devices. 
+            Our focus was enabling autonomy on drones to allow certification of non-human-in-the-loop systems. 
+            Essentially, by running the framework on a drone you would be cleared to fly without an operator and could have the autonomous system take full control completely outside of radar range. 
+        }
+    } \\[3.75pt]
     \multicolumn{3}{@{}l@{}}{
+        \small{
         \begin{minipage}[t]{\linewidth}
+        \vspace{0mm}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
             \item[--] Architected and implemented a robust \textbf{C++} microservice framework utilizing \textbf{Kafka and Protobuf} to actively monitor and rectify erroneous UAV and Aircraft behavior.
             \item[--] Selected on-vehicle hardware and software components to align with the defined architecture and product offerings.
             \item[--] Architected and implemented diverse interfaces to hardware sensors and autopilots in \textbf{C++}, ensuring seamless integration and data exchange.
             \item[--] Developed clear company-wide engineering strategies for observability, testing, and code quality.
-            \item[--] Updated old \textbf{C} code into modern \textbf{C++20} equivalent. 
+            \item[--] Migrated legacy \textbf{C} libraries into modern \textbf{C++20} libraries.
             \item[--] Implemented custom \textbf{Yocto} linux image for use in embedded companion computer.
             \item[--] Architected and implemented an in-flight status monitor for flight testing using \textbf{Qt}.
         \end{itemize}
         \end{minipage}
+        }
     }
 \\
 \\
@@ -206,17 +229,25 @@ Tools: & \normalsize{Docker, Git, Gitlab \& Jenkins CI/CD, Jira, CMake, Valgrind
     >{\hsize=1.0\hsize}X
     }
     \textbf{Software Lead}&\textbf{SAIC}&\hfill Oct 2020 - Apr 2021 \\[3.75pt]
+    \multicolumn{3}{p{7.3in}}{
+        \vspace{0mm}
+        \footnotesize{
+            \textbf{Responsibilities:} Modify the MLRS / HIMARS launcher to be operable remotely for range safety while testing experimental munitions. 
+        }
+    } \\[3.75pt]
     \multicolumn{3}{@{}l@{}}{
+        \small{
         \begin{minipage}[t]{\linewidth}
+        \vspace{0mm}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
             \item[--] Architected and implemented modifications of HIMARS / MLRS launcher to be operable remotely via \textbf{UDP, TCP, \& Qt} over radios.
             \item[--] Worked closely with the customer and systems team to ensure the \textbf{UX} was intuitive.
             \item[--] Concentrated on reducing operator cognitive load regarding latency and launcher state.
-            \item[--] Led the analysis and debugging of network traffic with \textbf{Wireshark}.
             \item[--] Optimized and translated old \textbf{C++03} code to modern \textbf{C++17} equivalent.
             \item[--] \textbf{Tasked and mentored} team of 4 other software engineers.
         \end{itemize}
         \end{minipage}
+        }
     }
 \\
 \\
@@ -228,19 +259,38 @@ Tools: & \normalsize{Docker, Git, Gitlab \& Jenkins CI/CD, Jira, CMake, Valgrind
     >{\hsize=1.0\hsize}X
     }
     \textbf{Software Engineer}&\textbf{Torch Technologies}&\hfill May 2018 - Oct 2020 \\[3.75pt]
+    \multicolumn{3}{p{7.3in}}{
+        \vspace{0mm}
+        \footnotesize{
+            \textbf{Responsibilities:} Extend a high-fidelity PATRIOT simulation to work in realtime with an HWIL ICC and create a flight test planning tool for hypersonic missiles with a focus on satellite sensor participation.
+        }
+    } \\[3.75pt]
     \multicolumn{3}{@{}l@{}}{
+        \small{
         \begin{minipage}[t]{\linewidth}
+        \vspace{0mm}
         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
             \item[--] Architected and implemented Python analysis scripts with \textbf{Pandas \& numpy} to analyze simulation data.
             \item[--] Translated IR sensor models and radar fusion algorithms from \textbf{Matlab} to \textbf{C++}.
-            \item[--] Architected and implemented a cross platform C++ \textbf{Qt} desktop application for data scientists to rapidly iterate on flight test planning.
+            \item[--] Architected and implemented a cross platform C++ \textbf{Qt} desktop application for data scientists to rapidly iterate on flight test planning for hypersonic missiles.
             \item[--] Worked closely with the customer regarding \textbf{UX} to ensure the UI was intuitive.
             \item[--] Set up \textbf{Jenkins CI/CD} jobs to automate code sanition, analysis, and regression tests.
             \item[--] Debugged C++ middleware to allow communication between PATRIOT \textbf{HWIL} and a simulation via \textbf{DIS \& UDP}.
         \end{itemize}
         \end{minipage}
+        }
     }
 \\
+\\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}lCr@{} }
+\textbf{Bachelor of Science, Computer Science} & & 2015 - 2018 \\
+University of Alabama Huntsville
 \end{tabularx}
 
 \vfill
